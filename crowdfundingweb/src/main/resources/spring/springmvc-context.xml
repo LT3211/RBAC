@@ -50,20 +50,6 @@
     </bean>
 
 
-    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" >
-        <property name="messageConverters" >
-            <list>
-                <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" >
-                    <property name="supportedMediaTypes" >
-                        <list>
-                            <value>application/json;charset=UTF-8</value>
-                        </list>
-                    </property>
-                </bean>
-            </list>
-        </property>
-    </bean>
-
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" p:defaultEncoding="UTF-8" >
         <property name="maxUploadSize" value="2097152"/>
         <property name="resolveLazily" value="true"/>
